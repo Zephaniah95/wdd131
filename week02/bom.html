@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOM Favorites</title>
+  <meta name="description" content="App to list favorite Book of Mormon chapters with delete functionality.">
+  <meta name="author" content="Imegi Nmeri Zephaniah">
+
+  <link rel="stylesheet" href="styles/bom.css">
+</head>
+<body>
+  <header>
+    <h1>📖 My Favorite Book of Mormon Chapters</h1>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="chapter">Enter a chapter:</label>
+      <input id="chapter" type="text" placeholder="e.g., Alma 5">
+      <button id="addButton">Add Chapter</button>
+    </section>
+
+    <section>
+      <h2>My Chapters List</h2>
+      <ul id="chapterList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 | Imegi Nmeri Zephaniah</p>
+  </footer>
+
+  <script src="scripts/bom.js"></script>
+</body>
+</html>
