@@ -1,0 +1,134 @@
+/* temples.css */
+/* Mobile First Styles */
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f0f0f0;
+    --accent1-color: #c9c9c9;
+    --accent2-color: #a3333d;
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--secondary-color);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+}
+
+#menu {
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+#menu:hover {
+    transform: scale(1.1);
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid var(--accent1-color);
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: var(--accent2-color);
+}
+
+main {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background-color: #fff;
+    padding: 0.5rem;
+    border: 1px solid var(--accent1-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+figcaption {
+    padding: 0.5rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

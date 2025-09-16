@@ -26,10 +26,16 @@ addButton.addEventListener('click', () => {
     // Clear input
     input.value = "";
     input.focus();
+  } else {
+    alert("Please enter a chapter name"); // NEW: message for blank input
+    input.focus();                        // NEW: refocus if blank
+  }
+});
 
-    // Delete functionality
-    deleteButton.addEventListener('click', () => {
-      list.removeChild(li);
-    });
+// NEW: Event delegation for delete functionality
+list.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    const li = e.target.parentElement;
+    list.removeChild(li);
   }
 });
