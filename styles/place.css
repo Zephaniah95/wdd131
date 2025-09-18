@@ -1,0 +1,141 @@
+/* place.css - Mobile First Styles */
+
+:root {
+    --primary-color: #008000; /* Green */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #000000; /* Black for contrast */
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.info-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-card.data h2 {
+    justify-content: flex-start;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon-mobile {
+    display: block;
+}
+
+.weather-icon-mobile img {
+    width: 48px;
+    height: auto;
+}
+
+#weather-icon-desktop::after {
+    content: none;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Media Query for Wider Views (desktop) */
+@media (min-width: 501px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-card.data {
+        grid-column: 1 / 2;
+    }
+
+    .info-card.weather {
+        grid-column: 2 / 3;
+    }
+
+    .info-card.history {
+        grid-column: 1 / 2;
+    }
+
+    .info-card.culture {
+        grid-column: 2 / 3;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    #weather-icon-desktop::after {
+        content: "⛅"; /* Pseudo-element emoticon */
+        margin-left: 0.5rem;
+    }
+}
