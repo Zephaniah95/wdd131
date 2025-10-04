@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lazy Loading Demo</title>
+
+  <!-- external CSS -->
+  <link rel="stylesheet" href="styles/lazyload.css">
+
+  <!-- external JS (deferred) -->
+  <script defer src="scripts/lazyload.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Lazy Loading Images Demo</h1>
+
+    <!-- SIX portrait images (400px wide, 600px+ height) -->
+    <img src="images/img1.jpeg" alt="Image 1"
+         width="400" height="600" loading="lazy" class="fade-in">
+
+    <img src="images/img2.jpeg" alt="Image 2"
+         width="400" height="620" loading="lazy" class="fade-in">
+
+    <img src="images/img3.jpeg" alt="Image 3"
+         width="400" height="650" loading="lazy" class="fade-in">
+
+    <img src="images/img4.jpeg" alt="Image 4"
+         width="400" height="680" loading="lazy" class="fade-in">
+
+    <img src="images/img5.jpeg" alt="Image 5"
+         width="400" height="640" loading="lazy" class="fade-in">
+
+    <img src="images/img6.jpeg" alt="Image 6"
+         width="400" height="700" loading="lazy" class="fade-in">
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lazy Load Demo</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
